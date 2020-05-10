@@ -1,0 +1,11 @@
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\bin\Debug\Cappato.Carolina.2D.exe.config
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\bin\Debug\Cappato.Carolina.2D.exe
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\bin\Debug\Cappato.Carolina.2D.pdb
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina.2D.csprojAssemblyReference.cache
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina._2D.FrmLogin.resources
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina._2D.FrmPrincipal.resources
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina._2D.Properties.Resources.resources
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina.2D.csproj.GenerateResource.cache
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina.2D.csproj.CoreCompileInputs.cache
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina.2D.exe
+C:\Cappato.Carolina.2D\Cappato.Carolina.2D\obj\Debug\Cappato.Carolina.2D.pdb

@@ -1,0 +1,6 @@
+C:\Cappato.Carolina.2D\Entidades\bin\Debug\Entidades.dll
+C:\Cappato.Carolina.2D\Entidades\bin\Debug\Entidades.pdb
+C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.dll
+C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.pdb
