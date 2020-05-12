@@ -60,7 +60,15 @@ namespace Entidades
 
 		public static bool operator +(Aula aula, Alumno alumno)
 		{
-			return false;
+			bool agrego = false;
+
+			if (aula.alumnos.Count < 30)
+			{
+				aula.alumnos.Add(alumno);
+				agrego = true;
+			}
+
+			return agrego;
 		}
 
 		#endregion

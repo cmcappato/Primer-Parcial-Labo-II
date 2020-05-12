@@ -44,30 +44,30 @@ namespace Entidades
 
 		protected override double CalcularSalario()
 		{
-			double salarioTotal = salarioBase;
+			double salarioAdministrativo = salarioBase * (double)cargo / 100;
 
-			if(cargo == ECargo.Portería)
-			{
-				salarioTotal = salarioBase;
-			}
-			else if (cargo == ECargo.Cocina)
-			{
-				salarioTotal = (salarioBase * 110) / 100;
-			}
-			else if (cargo == ECargo.Secretaría)
-			{
-				salarioTotal = (salarioBase * 140) / 100;
-			}
-			else if (cargo == ECargo.Portería)
-			{
-				salarioTotal = (salarioBase * 240) / 100;
-			}
-			else if (cargo == ECargo.Dirección)
-			{
-				salarioTotal = (salarioBase * 180) / 100;
-			}
+			//if(cargo == ECargo.Portería)
+			//{
+			//	salarioTotal = salarioBase;
+			//}
+			//else if (cargo == ECargo.Cocina)
+			//{
+			//	salarioTotal = (salarioBase * 110) / 100;
+			//}
+			//else if (cargo == ECargo.Secretaría)
+			//{
+			//	salarioTotal = (salarioBase * 140) / 100;
+			//}
+			//else if (cargo == ECargo.Portería)
+			//{
+			//	salarioTotal = (salarioBase * 240) / 100;
+			//}
+			//else if (cargo == ECargo.Dirección)
+			//{
+			//	salarioTotal = (salarioBase * 180) / 100;
+			//}
 
-			return salarioTotal;
+			return salarioAdministrativo;
 		}
 
 		#endregion

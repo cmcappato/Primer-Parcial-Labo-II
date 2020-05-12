@@ -33,7 +33,7 @@ namespace Entidades
 
 		#region Constructor
 
-		public Responsable(string apellido, string nombre, int dni, bool femenino, EParentesco parentesco, string telefono) : base(apellido, nombre, dni, femenino)
+		private Responsable(string apellido, string nombre, int dni, bool femenino, EParentesco parentesco, string telefono) : base(apellido, nombre, dni, femenino)
 		{
 			this.parentesco = parentesco;
 			this.telefono = telefono;

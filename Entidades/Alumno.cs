@@ -58,17 +58,17 @@ namespace Entidades
 
         public static implicit operator Responsable(Alumno al)
         {
-            return al;
+            return al.responsable;
         }
 
         public static bool operator ==(Alumno a1, Alumno a2)
         {
-            return (a1.legajo == a2.legajo) && (a1) == (a2);
+            return (a1.legajo == a2.legajo) && (((Responsable)a1) == (a2.responsable));
         }
 
         public static bool operator !=(Alumno a1, Alumno a2)
         {
-            return false;
+            return !(a1 == a2);
         }
         #endregion
 

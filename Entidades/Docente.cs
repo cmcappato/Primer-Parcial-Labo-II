@@ -11,6 +11,7 @@ namespace Entidades
 		#region Campos
 
 		private double valorHora;
+		private TimeSpan diferenciaHoras;
 
 		#endregion
 
@@ -24,16 +25,17 @@ namespace Entidades
 
 		public int HorasMensuales
 		{
-			get;
+			get { return (int)diferenciaHoras.TotalHours; }
 		}
 
 		#endregion
 
 		#region Constructor
-
-		private Docente(string apellido, string nombre, int dni, bool femenino, DateTime horaEntrada, DateTime horaSalida) : base(apellido, nombre, dni, femenino, horaEntrada, horaSalida)
+		
+		public Docente(string apellido, string nombre, int dni, bool femenino, DateTime horaEntrada, DateTime horaSalida, double valorHora) : base(apellido, nombre, dni, femenino, horaEntrada, horaSalida)
 		{
-
+			diferenciaHoras = horaSalida - horaEntrada;
+			this.valorHora = valorHora;
 		}
 
 		#endregion
@@ -42,8 +44,16 @@ namespace Entidades
 
 		protected override double CalcularSalario()
 		{
-			return 0;
+			double salarioDocente = (valorHora * diferenciaHoras.TotalHours) * 20;
+
+			return salarioDocente;
 		}
+
+		public override string ToString()
+		{
+			return Apellido + ", " + Nombre;
+		}
+
 
 		#endregion
 	}

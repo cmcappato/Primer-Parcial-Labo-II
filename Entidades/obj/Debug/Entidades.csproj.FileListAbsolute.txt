@@ -4,3 +4,9 @@ C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cac
 C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.dll
 C:\Cappato.Carolina.2D\Entidades\obj\Debug\Entidades.pdb
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\bin\Debug\Entidades.dll
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\bin\Debug\Entidades.pdb
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\obj\Debug\Entidades.dll
+C:\Cappato.Carolina.2D\Primer-Parcial-Labo-II\Entidades\obj\Debug\Entidades.pdb

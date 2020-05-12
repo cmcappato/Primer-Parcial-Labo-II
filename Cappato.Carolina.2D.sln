@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cappato.Carolina.2D", "Cappato.Carolina.2D\Cappato.Carolina.2D.csproj", "{2657CF80-86F6-41AB-98D3-D0B5D680FA2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba", "Prueba\Prueba.csproj", "{100A9980-146A-460F-B070-9A40883A5857}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{2657CF80-86F6-41AB-98D3-D0B5D680FA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2657CF80-86F6-41AB-98D3-D0B5D680FA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2657CF80-86F6-41AB-98D3-D0B5D680FA2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{100A9980-146A-460F-B070-9A40883A5857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{100A9980-146A-460F-B070-9A40883A5857}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{100A9980-146A-460F-B070-9A40883A5857}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{100A9980-146A-460F-B070-9A40883A5857}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
