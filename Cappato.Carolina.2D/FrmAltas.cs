@@ -15,27 +15,33 @@ namespace Cappato.Carolina._2D
     {
         List<Docente> listaDocentes;
         List<Alumno> listaAlumnos;
+        List<Aula> listAulas;
 
-        public FrmAltas(List<Docente> listaDocentes, List<Alumno> listaAlumnos)
+        public FrmAltas(List<Docente> listaDocentes, List<Alumno> listaAlumnos, List<Aula> listAulas)
         {
             InitializeComponent();
             this.listaDocentes = listaDocentes;
             this.listaAlumnos = listaAlumnos;
+            this.listAulas = listAulas;
         }
 
         private void FrmAltas_Load(object sender, EventArgs e)
         {
             cmbColores.DataSource = Enum.GetValues(typeof(EColores));
-            cmbDocentes.ValueMember = "Apellido";
-            cmbDocentes.DisplayMember = String.Concat("Apellido", ", ", "Nombre");
-            //cmbDocentes.DataSource = listaDocentes;
+            cmbTurno.DataSource = Enum.GetValues(typeof(ETurno));
 
-            foreach(Docente docente in listaDocentes)
-            {
-                cmbDocentes.Items.Add(docente.ToString());
-            }
 
-            dgvAlumnosAsignados.DataSource = listaAlumnos;
+            //cmbDocentes.ValueMember = "Apellido";
+            //cmbDocentes.DisplayMember = String.Concat("Apellido", ", ", "Nombre");
+            cmbDocentes.DataSource = listaDocentes;
+
+            //foreach(Docente docente in listaDocentes)
+            //{
+            //    cmbDocentes.Items.Add(docente.ToString());
+            //}
+
+
+            lstAlumnosSinAula.DataSource = listaAlumnos;
 
         }
 
@@ -66,8 +72,19 @@ namespace Cappato.Carolina._2D
 
         private void btnGuardarAltas_Click(object sender, EventArgs e)
         {
+            Aula nuevaAula = new Aula((EColores)cmbColores.SelectedItem, (ETurno)cmbTurno.SelectedItem, (Docente)cmbDocentes.SelectedItem);
+            foreach (Alumno alumno in lstAlumnosSinAula.SelectedItems)
+            {
+                alumno.ColorSala = nuevaAula.Colores;
+                nuevaAula.Alumnos.Add(alumno);
+            }
+            this.listAulas.Add(nuevaAula);
 
         }
 
+        private void cmbTurno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

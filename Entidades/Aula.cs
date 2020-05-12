@@ -47,12 +47,18 @@ namespace Entidades
 
 		#region Constructor
 
-		public Aula(EColores colorSala, ETurno turno, Docente docente)
+		private Aula()
+		{
+			alumnos = new List<Alumno>();
+		}
+
+		public Aula(EColores colorSala, ETurno turno, Docente docente) : this()
 		{
 			this.turno = turno;
 			this.colorSala = colorSala;
 			this.docente = docente;
 		}
+
 
 		#endregion
 

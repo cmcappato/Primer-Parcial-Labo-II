@@ -16,6 +16,7 @@ namespace Cappato.Carolina._2D
         List<Docente> listaDocentes;
         List<Administrativo> listaNoDocentes;
         List<Alumno> listaAlumnos;
+        List<Aula> listaAulas;
         List<Aula> aulasTurnoMañana;
         List<Aula> aulasTurnoTarde;
 
@@ -25,6 +26,7 @@ namespace Cappato.Carolina._2D
             listaDocentes = new List<Docente>();
             listaNoDocentes = new List<Administrativo>();
             listaAlumnos = new List<Alumno>();
+            listaAulas = new List<Aula>();
             aulasTurnoMañana = new List<Aula>();
             aulasTurnoTarde = new List<Aula>();
         }
@@ -58,7 +60,7 @@ namespace Cappato.Carolina._2D
 
         private void altaAulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAltas frmAltas = new FrmAltas(listaDocentes, listaAlumnos);
+            FrmAltas frmAltas = new FrmAltas(listaDocentes, listaAlumnos, listaAulas);
             frmAltas.MdiParent = this;
 
             frmAltas.Show();

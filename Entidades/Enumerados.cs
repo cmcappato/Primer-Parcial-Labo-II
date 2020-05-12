@@ -1,49 +1,49 @@
 ﻿#region ECargo
 
-    public enum ECargo
-    {
-        Portería = 100,
-        Cocina = 110,
-        Secretaría = 140,
-        Tesorería = 240,
-        Dirección = 180
-    }
+public enum ECargo
+{
+    Portería = 100,
+    Cocina = 110,
+    Secretaría = 140,
+    Tesorería = 240,
+    Dirección = 180
+}
 
-    #endregion
+#endregion
 
 #region EColores
 
-    public enum EColores
-    {
-        Amarillo,
-        Naranja,
-        Rojo,
-        Verde
-    }
+public enum EColores
+{
+    Amarillo,
+    Naranja,
+    Rojo,
+    Verde
+}
 
-    #endregion
+#endregion
 
 #region EParentesco
 
-    public enum EParentesco
-    {
-        Madre,
-        Padre,
-        Tía,
-        Tío,
-        Abuela,
-        Abuelo,
-        Otro
-    }
+public enum EParentesco
+{
+    Madre,
+    Padre,
+    Tía,
+    Tío,
+    Abuela,
+    Abuelo,
+    Otro
+}
 
-    #endregion
+#endregion
 
 #region ETurno
 
-    public enum ETurno
-    {
-        Mañana,
-        Tarde
-    }
+public enum ETurno
+{
+    Mañana,
+    Tarde
+}
 
 #endregion

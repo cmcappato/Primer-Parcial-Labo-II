@@ -73,12 +73,7 @@ namespace Entidades
         #endregion
 
         #region Invalidaciones
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
+               
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
@@ -87,6 +82,11 @@ namespace Entidades
         public override int GetHashCode()
         {
             return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return Apellido + ", " + Nombre;
         }
 
         #endregion

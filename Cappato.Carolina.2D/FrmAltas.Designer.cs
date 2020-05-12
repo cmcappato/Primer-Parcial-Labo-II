@@ -39,10 +39,6 @@
             this.btnGuardarAltas = new System.Windows.Forms.Button();
             this.btnCancelarAltas = new System.Windows.Forms.Button();
             this.dgvAlumnosAsignados = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lstAlumnosSinAula = new System.Windows.Forms.ListBox();
-            this.lblAlumnosSinAula = new System.Windows.Forms.Label();
-            this.lblAlumnosAsignados = new System.Windows.Forms.Label();
             this.legajoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +48,17 @@
             this.precioCuotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.femeninoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lstAlumnosSinAula = new System.Windows.Forms.ListBox();
+            this.lblAlumnosSinAula = new System.Windows.Forms.Label();
+            this.lblAlumnosAsignados = new System.Windows.Forms.Label();
             this.grpbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosAsignados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grpbxDatos
@@ -109,6 +109,7 @@
             this.cmbTurno.Name = "cmbTurno";
             this.cmbTurno.Size = new System.Drawing.Size(150, 21);
             this.cmbTurno.TabIndex = 2;
+            this.cmbTurno.SelectedIndexChanged += new System.EventHandler(this.cmbTurno_SelectedIndexChanged);
             // 
             // lblColores
             // 
@@ -166,49 +167,6 @@
             this.dgvAlumnosAsignados.Size = new System.Drawing.Size(590, 413);
             this.dgvAlumnosAsignados.TabIndex = 1;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(15, 151);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.lstAlumnosSinAula);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvAlumnosAsignados);
-            this.splitContainer1.Size = new System.Drawing.Size(899, 422);
-            this.splitContainer1.SplitterDistance = 299;
-            this.splitContainer1.TabIndex = 6;
-            // 
-            // lstAlumnosSinAula
-            // 
-            this.lstAlumnosSinAula.FormattingEnabled = true;
-            this.lstAlumnosSinAula.Location = new System.Drawing.Point(3, 6);
-            this.lstAlumnosSinAula.Name = "lstAlumnosSinAula";
-            this.lstAlumnosSinAula.Size = new System.Drawing.Size(293, 407);
-            this.lstAlumnosSinAula.TabIndex = 0;
-            // 
-            // lblAlumnosSinAula
-            // 
-            this.lblAlumnosSinAula.AutoSize = true;
-            this.lblAlumnosSinAula.Location = new System.Drawing.Point(26, 133);
-            this.lblAlumnosSinAula.Name = "lblAlumnosSinAula";
-            this.lblAlumnosSinAula.Size = new System.Drawing.Size(89, 13);
-            this.lblAlumnosSinAula.TabIndex = 7;
-            this.lblAlumnosSinAula.Text = "Alumnos Sin Aula";
-            // 
-            // lblAlumnosAsignados
-            // 
-            this.lblAlumnosAsignados.AutoSize = true;
-            this.lblAlumnosAsignados.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblAlumnosAsignados.Location = new System.Drawing.Point(345, 130);
-            this.lblAlumnosAsignados.Name = "lblAlumnosAsignados";
-            this.lblAlumnosAsignados.Size = new System.Drawing.Size(98, 13);
-            this.lblAlumnosAsignados.TabIndex = 8;
-            this.lblAlumnosAsignados.Text = "Alumnos asignados";
-            // 
             // legajoDataGridViewTextBoxColumn
             // 
             this.legajoDataGridViewTextBoxColumn.DataPropertyName = "Legajo";
@@ -261,6 +219,50 @@
             // 
             this.alumnoBindingSource.DataSource = typeof(Entidades.Alumno);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(15, 151);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.lstAlumnosSinAula);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgvAlumnosAsignados);
+            this.splitContainer1.Size = new System.Drawing.Size(899, 422);
+            this.splitContainer1.SplitterDistance = 299;
+            this.splitContainer1.TabIndex = 6;
+            // 
+            // lstAlumnosSinAula
+            // 
+            this.lstAlumnosSinAula.FormattingEnabled = true;
+            this.lstAlumnosSinAula.Location = new System.Drawing.Point(3, 6);
+            this.lstAlumnosSinAula.Name = "lstAlumnosSinAula";
+            this.lstAlumnosSinAula.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstAlumnosSinAula.Size = new System.Drawing.Size(293, 407);
+            this.lstAlumnosSinAula.TabIndex = 0;
+            // 
+            // lblAlumnosSinAula
+            // 
+            this.lblAlumnosSinAula.AutoSize = true;
+            this.lblAlumnosSinAula.Location = new System.Drawing.Point(26, 133);
+            this.lblAlumnosSinAula.Name = "lblAlumnosSinAula";
+            this.lblAlumnosSinAula.Size = new System.Drawing.Size(89, 13);
+            this.lblAlumnosSinAula.TabIndex = 7;
+            this.lblAlumnosSinAula.Text = "Alumnos Sin Aula";
+            // 
+            // lblAlumnosAsignados
+            // 
+            this.lblAlumnosAsignados.AutoSize = true;
+            this.lblAlumnosAsignados.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblAlumnosAsignados.Location = new System.Drawing.Point(345, 130);
+            this.lblAlumnosAsignados.Name = "lblAlumnosAsignados";
+            this.lblAlumnosAsignados.Size = new System.Drawing.Size(98, 13);
+            this.lblAlumnosAsignados.TabIndex = 8;
+            this.lblAlumnosAsignados.Text = "Alumnos asignados";
+            // 
             // FrmAltas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,11 +283,11 @@
             this.grpbxDatos.ResumeLayout(false);
             this.grpbxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosAsignados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

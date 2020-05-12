@@ -54,7 +54,6 @@ namespace Entidades
 			return Apellido + ", " + Nombre;
 		}
 
-
 		#endregion
 	}
 }
