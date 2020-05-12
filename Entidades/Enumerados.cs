@@ -15,9 +15,9 @@
 
     public enum EColores
     {
+        Amarillo,
         Naranja,
         Rojo,
-        Amarillo,
         Verde
     }
 

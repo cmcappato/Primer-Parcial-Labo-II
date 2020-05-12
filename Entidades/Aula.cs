@@ -61,6 +61,7 @@ namespace Entidades
 		public static bool operator +(Aula aula, Alumno alumno)
 		{
 			bool agrego = false;
+					
 
 			if (aula.alumnos.Count < 30)
 			{
