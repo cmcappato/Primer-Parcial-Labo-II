@@ -12,7 +12,7 @@ namespace Entidades
 
 		private DateTime horaEntrada;
 		private DateTime horaSalida;
-
+				
 		#endregion
 
 		#region Propiedades

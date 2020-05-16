@@ -17,8 +17,8 @@ namespace Cappato.Carolina._2D
         List<Administrativo> listaNoDocentes;
         List<Alumno> listaAlumnos;
         List<Aula> listaAulas;
-        List<Aula> aulasTurnoMañana;
-        List<Aula> aulasTurnoTarde;
+        //List<Aula> aulasTurnoMañana;
+        //List<Aula> aulasTurnoTarde;
 
         public FrmPrincipal()
         {
@@ -27,8 +27,8 @@ namespace Cappato.Carolina._2D
             listaNoDocentes = new List<Administrativo>();
             listaAlumnos = new List<Alumno>();
             listaAulas = new List<Aula>();
-            aulasTurnoMañana = new List<Aula>();
-            aulasTurnoTarde = new List<Aula>();
+            //aulasTurnoMañana = new List<Aula>();
+            //aulasTurnoTarde = new List<Aula>();
         }
 
 
@@ -38,6 +38,7 @@ namespace Cappato.Carolina._2D
             frmLogin.ShowDialog();
         }
 
+        #region Altas faltantes
         private void altaDocenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //FrmAltas frmAltas = new FrmAltas();
@@ -57,6 +58,7 @@ namespace Cappato.Carolina._2D
             //frmAltas.MdiParent = this;           
             //frmAltas.Show();
         }
+        #endregion
 
         private void altaAulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,16 +71,18 @@ namespace Cappato.Carolina._2D
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 this.Close();
             }
         }
 
+        #region Botones para generar data
+
         private void generarDocentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateListaDocentes();
-            if (listaDocentes != null)
+            if (listaDocentes != null)//Valido que la lista sea distinta de NULL para deshabilitar el boton
             {
                 generarDocentesToolStripMenuItem.Enabled = false;
             }
@@ -87,7 +91,7 @@ namespace Cappato.Carolina._2D
         private void generarNoDocentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateListaNoDocentes();
-            if (listaNoDocentes != null)
+            if (listaNoDocentes != null)//Valido que la lista sea distinta de NULL para deshabilitar el boton
             {
                 generarNoDocentesToolStripMenuItem.Enabled = false;
             }
@@ -96,12 +100,13 @@ namespace Cappato.Carolina._2D
         private void generarAlumnosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateListaAlumnos();
-            if (listaAlumnos != null)
+            if (listaAlumnos != null)//Valido que la lista sea distinta de NULL para deshabilitar el boton
             {
                 generarAlumnosToolStripMenuItem.Enabled = false;
             }
         }
 
+        #endregion
 
         #region Crear listas
 

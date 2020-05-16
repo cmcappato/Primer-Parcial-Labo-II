@@ -146,6 +146,7 @@
             this.btnCancelarAltas.TabIndex = 5;
             this.btnCancelarAltas.Text = "Cancelar";
             this.btnCancelarAltas.UseVisualStyleBackColor = true;
+            this.btnCancelarAltas.Click += new System.EventHandler(this.btnCancelarAltas_Click);
             // 
             // dgvAlumnosAsignados
             // 

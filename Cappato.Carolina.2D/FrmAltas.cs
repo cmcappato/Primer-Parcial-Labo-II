@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Cappato.Carolina._2D
 {
@@ -25,24 +26,26 @@ namespace Cappato.Carolina._2D
             this.listAulas = listAulas;
         }
 
+        
+
         private void FrmAltas_Load(object sender, EventArgs e)
         {
             cmbColores.DataSource = Enum.GetValues(typeof(EColores));
             cmbTurno.DataSource = Enum.GetValues(typeof(ETurno));
+            cmbDocentes.DataSource = listaDocentes;
+            lstAlumnosSinAula.DataSource = listaAlumnos;
 
+            #region No funcionó
 
             //cmbDocentes.ValueMember = "Apellido";
             //cmbDocentes.DisplayMember = String.Concat("Apellido", ", ", "Nombre");
-            cmbDocentes.DataSource = listaDocentes;
 
             //foreach(Docente docente in listaDocentes)
             //{
             //    cmbDocentes.Items.Add(docente.ToString());
             //}
 
-
-            lstAlumnosSinAula.DataSource = listaAlumnos;
-
+            #endregion
         }
 
         private void cmbColores_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,26 +68,41 @@ namespace Cappato.Carolina._2D
                     this.BackColor = Color.FromArgb(8, 195, 102);
                     break;
                 default:
-                    break;                    
+                    break;
             }
         }
 
-
         private void btnGuardarAltas_Click(object sender, EventArgs e)
         {
-            Aula nuevaAula = new Aula((EColores)cmbColores.SelectedItem, (ETurno)cmbTurno.SelectedItem, (Docente)cmbDocentes.SelectedItem);
-            foreach (Alumno alumno in lstAlumnosSinAula.SelectedItems)
+            if (MessageBox.Show("¿Desea guardar los cambios ?", "Guardar cambios", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                alumno.ColorSala = nuevaAula.Colores;
-                nuevaAula.Alumnos.Add(alumno);
+                Aula nuevaAula = new Aula((EColores)cmbColores.SelectedItem, (ETurno)cmbTurno.SelectedItem, (Docente)cmbDocentes.SelectedItem);
+                foreach (Alumno alumno in lstAlumnosSinAula.SelectedItems)
+                {
+                    alumno.ColorSala = nuevaAula.Colores;
+                    nuevaAula.Alumnos.Add(alumno);
+                }
+                this.listAulas.Add(nuevaAula);
+
+                MessageBox.Show("Se han guardado los cambios");
+
+                //SystemSounds.Beep.Play(); Por algun motivo esto no hace sonido 
             }
-            this.listAulas.Add(nuevaAula);
+            else
+            {
+                MessageBox.Show("No se guardaron los cambios");
+            }
 
         }
 
         private void cmbTurno_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelarAltas_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
