@@ -86,7 +86,7 @@ namespace Cappato.Carolina._2D
 
                 MessageBox.Show("Se han guardado los cambios");
 
-                //SystemSounds.Beep.Play(); Por algun motivo esto no hace sonido 
+                SystemSounds.Beep.Play(); //Por algun motivo esto no hace sonido 
             }
             else
             {

@@ -48,17 +48,12 @@
             this.precioCuotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.femeninoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lstAlumnosSinAula = new System.Windows.Forms.ListBox();
             this.lblAlumnosSinAula = new System.Windows.Forms.Label();
             this.lblAlumnosAsignados = new System.Windows.Forms.Label();
             this.grpbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosAsignados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpbxDatos
@@ -71,7 +66,7 @@
             this.grpbxDatos.Controls.Add(this.cmbColores);
             this.grpbxDatos.Location = new System.Drawing.Point(9, 19);
             this.grpbxDatos.Name = "grpbxDatos";
-            this.grpbxDatos.Size = new System.Drawing.Size(906, 106);
+            this.grpbxDatos.Size = new System.Drawing.Size(963, 106);
             this.grpbxDatos.TabIndex = 0;
             this.grpbxDatos.TabStop = false;
             this.grpbxDatos.Text = "Datos del aula";
@@ -130,7 +125,7 @@
             // 
             // btnGuardarAltas
             // 
-            this.btnGuardarAltas.Location = new System.Drawing.Point(755, 573);
+            this.btnGuardarAltas.Location = new System.Drawing.Point(795, 521);
             this.btnGuardarAltas.Name = "btnGuardarAltas";
             this.btnGuardarAltas.Size = new System.Drawing.Size(80, 30);
             this.btnGuardarAltas.TabIndex = 4;
@@ -140,7 +135,7 @@
             // 
             // btnCancelarAltas
             // 
-            this.btnCancelarAltas.Location = new System.Drawing.Point(841, 573);
+            this.btnCancelarAltas.Location = new System.Drawing.Point(892, 521);
             this.btnCancelarAltas.Name = "btnCancelarAltas";
             this.btnCancelarAltas.Size = new System.Drawing.Size(80, 30);
             this.btnCancelarAltas.TabIndex = 5;
@@ -163,9 +158,9 @@
             this.precioCuotaDataGridViewTextBoxColumn,
             this.femeninoDataGridViewCheckBoxColumn});
             this.dgvAlumnosAsignados.DataSource = this.alumnoBindingSource;
-            this.dgvAlumnosAsignados.Location = new System.Drawing.Point(6, 6);
+            this.dgvAlumnosAsignados.Location = new System.Drawing.Point(285, 160);
             this.dgvAlumnosAsignados.Name = "dgvAlumnosAsignados";
-            this.dgvAlumnosAsignados.Size = new System.Drawing.Size(590, 413);
+            this.dgvAlumnosAsignados.Size = new System.Drawing.Size(687, 355);
             this.dgvAlumnosAsignados.TabIndex = 1;
             // 
             // legajoDataGridViewTextBoxColumn
@@ -189,13 +184,13 @@
             // dniDataGridViewTextBoxColumn
             // 
             this.dniDataGridViewTextBoxColumn.DataPropertyName = "Dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "Dni";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
             this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
             // 
             // colorSalaDataGridViewTextBoxColumn
             // 
             this.colorSalaDataGridViewTextBoxColumn.DataPropertyName = "ColorSala";
-            this.colorSalaDataGridViewTextBoxColumn.HeaderText = "ColorSala";
+            this.colorSalaDataGridViewTextBoxColumn.HeaderText = "Color Sala";
             this.colorSalaDataGridViewTextBoxColumn.Name = "colorSalaDataGridViewTextBoxColumn";
             // 
             // responsableDataGridViewTextBoxColumn
@@ -207,7 +202,7 @@
             // precioCuotaDataGridViewTextBoxColumn
             // 
             this.precioCuotaDataGridViewTextBoxColumn.DataPropertyName = "PrecioCuota";
-            this.precioCuotaDataGridViewTextBoxColumn.HeaderText = "PrecioCuota";
+            this.precioCuotaDataGridViewTextBoxColumn.HeaderText = "Precio Cuota";
             this.precioCuotaDataGridViewTextBoxColumn.Name = "precioCuotaDataGridViewTextBoxColumn";
             // 
             // femeninoDataGridViewCheckBoxColumn
@@ -220,29 +215,13 @@
             // 
             this.alumnoBindingSource.DataSource = typeof(Entidades.Alumno);
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(15, 151);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.lstAlumnosSinAula);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvAlumnosAsignados);
-            this.splitContainer1.Size = new System.Drawing.Size(899, 422);
-            this.splitContainer1.SplitterDistance = 299;
-            this.splitContainer1.TabIndex = 6;
-            // 
             // lstAlumnosSinAula
             // 
             this.lstAlumnosSinAula.FormattingEnabled = true;
-            this.lstAlumnosSinAula.Location = new System.Drawing.Point(3, 6);
+            this.lstAlumnosSinAula.Location = new System.Drawing.Point(29, 160);
             this.lstAlumnosSinAula.Name = "lstAlumnosSinAula";
             this.lstAlumnosSinAula.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstAlumnosSinAula.Size = new System.Drawing.Size(293, 407);
+            this.lstAlumnosSinAula.Size = new System.Drawing.Size(245, 355);
             this.lstAlumnosSinAula.TabIndex = 0;
             // 
             // lblAlumnosSinAula
@@ -258,7 +237,7 @@
             // 
             this.lblAlumnosAsignados.AutoSize = true;
             this.lblAlumnosAsignados.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblAlumnosAsignados.Location = new System.Drawing.Point(345, 130);
+            this.lblAlumnosAsignados.Location = new System.Drawing.Point(303, 133);
             this.lblAlumnosAsignados.Name = "lblAlumnosAsignados";
             this.lblAlumnosAsignados.Size = new System.Drawing.Size(98, 13);
             this.lblAlumnosAsignados.TabIndex = 8;
@@ -268,27 +247,25 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 608);
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.dgvAlumnosAsignados);
+            this.Controls.Add(this.lstAlumnosSinAula);
             this.Controls.Add(this.lblAlumnosAsignados);
             this.Controls.Add(this.lblAlumnosSinAula);
-            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnCancelarAltas);
             this.Controls.Add(this.btnGuardarAltas);
             this.Controls.Add(this.grpbxDatos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmAltas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAltas_Load);
             this.grpbxDatos.ResumeLayout(false);
             this.grpbxDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnosAsignados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,7 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn responsableDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioCuotaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn femeninoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ComboBox cmbDocentes;
         private System.Windows.Forms.ComboBox cmbTurno;
         private System.Windows.Forms.Label label2;

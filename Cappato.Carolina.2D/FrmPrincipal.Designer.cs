@@ -45,7 +45,6 @@
             this.generarDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarNoDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarAlumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelTitle = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +57,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.archivoToolStripMenuItem;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1300, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1144, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -189,26 +188,17 @@
             this.generarAlumnosToolStripMenuItem.Text = "Alumnos";
             this.generarAlumnosToolStripMenuItem.Click += new System.EventHandler(this.generarAlumnosToolStripMenuItem_Click);
             // 
-            // panelTitle
-            // 
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 24);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1300, 35);
-            this.panelTitle.TabIndex = 3;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1300, 650);
-            this.Controls.Add(this.panelTitle);
+            this.ClientSize = new System.Drawing.Size(1144, 671);
             this.Controls.Add(this.menuStrip);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
@@ -242,6 +232,5 @@
         private System.Windows.Forms.ToolStripMenuItem generarDocentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarNoDocentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarAlumnosToolStripMenuItem;
-        private System.Windows.Forms.Panel panelTitle;
     }
 }
